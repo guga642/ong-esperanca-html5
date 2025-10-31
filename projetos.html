@@ -3,85 +3,413 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nossos Projetos - ONG Esperança</title>
+  <title>Nossos Projetos - ONG Novo Mundo Para Todos</title>
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-  <header>
-    <h1>ONG Esperança</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">ONG Novo Mundo Para Todos</a>
+      
+      <nav class="nav-menu">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li class="dropdown">
+            <a href="projetos.html" class="nav-link active">Projetos ▾</a>
+            <div class="dropdown-content">
+              <a href="#educacao" class="dropdown-link">Educação</a>
+              <a href="#alimentacao" class="dropdown-link">Alimentação</a>
+              <a href="#saude" class="dropdown-link">Saúde</a>
+            </div>
+          </li>
+          <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+          <li><a href="#doar" class="btn btn-primary">Doar Agora</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="intro-projetos">
-      <h2>Nossos Projetos em Ação</h2>
-      <p>Conheça as iniciativas que estão transformando vidas e comunidades.</p>
-    </section>
+  <div class="mobile-menu">
+    <button class="close-menu">×</button>
+    <ul class="mobile-nav">
+      <li><a href="index.html" class="mobile-nav-link">Início</a></li>
+      <li><a href="projetos.html" class="mobile-nav-link">Projetos</a></li>
+      <li><a href="cadastro.html" class="mobile-nav-link">Cadastro</a></li>
+      <li><a href="#doar" class="mobile-nav-link">Doar Agora</a></li>
+    </ul>
+  </div>
 
-    <section class="projeto">
-      <img src="imagens/voluntariado.jpg" alt="Projeto Educação para Todos">
-      <div class="projeto-info">
-        <h3>📚 Educação para Todos</h3>
-        <p><strong>Objetivo:</strong> Oferecer reforço escolar e atividades extracurriculares para crianças e adolescentes.</p>
-        <p><strong>Público:</strong> 200 crianças atendidas mensalmente</p>
-        <p><strong>Local:</strong> Comunidade Vila Esperança</p>
-        <div class="status ativo">● Em Andamento</div>
+  <main class="container">
+    <section style="padding: var(--space-12) 0;">
+      <div class="hero-grid">
+        <div>
+          <h1>Nossos Projetos em Ação</h1>
+          <p class="text-xl" style="color: var(--neutral-600); margin-bottom: var(--space-6);">
+            Conheça as iniciativas que estão transformando vidas e construindo um futuro melhor para milhares de famílias.
+          </p>
+          <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="#educacao" class="btn btn-primary">Educação</a>
+            <a href="#alimentacao" class="btn btn-outline">Alimentação</a>
+            <a href="#saude" class="btn btn-outline">Saúde</a>
+            <a href="cadastro.html" class="btn btn-secondary">Participar</a>
+          </div>
+        </div>
+        <div>
+          <img src="imagens/banner1.jpg" alt="Nossos projetos em ação" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+        </div>
       </div>
     </section>
 
-    <section class="projeto">
-      <img src="imagens/doacao.jpg" alt="Projeto Cestas Básicas">
-      <div class="projeto-info">
-        <h3>🛒 Cestas Básicas Solidárias</h3>
-        <p><strong>Objetivo:</strong> Distribuição mensal de cestas básicas para famílias em situação de vulnerabilidade.</p>
-        <p><strong>Público:</strong> 150 famílias beneficiadas</p>
-        <p><strong>Local:</strong> Todo o município</p>
-        <div class="status ativo">● Em Andamento</div>
+    <section style="padding: var(--space-8) 0;">
+      <div class="features-grid">
+        <div class="card" style="padding: var(--space-6); text-align: center; background: linear-gradient(135deg, var(--primary-500), var(--primary-600)); color: white; min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">📚</div>
+          <h3 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-xl);">Educação</h3>
+          <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); margin-bottom: var(--space-2);">2.000+</div>
+          <div style="font-size: var(--text-sm);">Crianças Atendidas</div>
+        </div>
+
+        <div class="card" style="padding: var(--space-6); text-align: center; background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600)); color: white; min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">🛒</div>
+          <h3 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-xl);">Alimentação</h3>
+          <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); margin-bottom: var(--space-2);">1.500+</div>
+          <div style="font-size: var(--text-sm);">Famílias Beneficiadas</div>
+        </div>
+
+        <div class="card" style="padding: var(--space-6); text-align: center; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">💙</div>
+          <h3 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-xl);">Saúde Mental</h3>
+          <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); margin-bottom: var(--space-2);">800+</div>
+          <div style="font-size: var(--text-sm);">Pessoas Apoiadas</div>
+        </div>
+
+        <div class="card" style="padding: var(--space-6); text-align: center; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">⚡</div>
+          <h3 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-xl);">Capacitação</h3>
+          <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); margin-bottom: var(--space-2);">300+</div>
+          <div style="font-size: var(--text-sm);">Jovens Formados</div>
+        </div>
       </div>
     </section>
 
-    <section class="projeto">
-      <img src="imagens/banner1.jpg" alt="Projeto Oficina de Profissões">
-      <div class="projeto-info">
-        <h3>⚡ Oficina de Profissões</h3>
-        <p><strong>Objetivo:</strong> Capacitação profissional para jovens e adultos.</p>
-        <p><strong>Cursos:</strong> Marcenaria, Costura, Informática Básica</p>
-        <p><strong>Local:</strong> Sede da ONG</p>
-        <div class="status planejamento">● Em Planejamento</div>
+    <section id="educacao" style="padding: var(--space-12) 0;">
+      <div style="text-align: center; margin-bottom: var(--space-8);">
+        <span class="badge badge-primary">Educação</span>
+        <h2>Projetos Educacionais</h2>
+        <p style="color: var(--neutral-600); max-width: 600px; margin: 0 auto;">Levar educação de qualidade para crianças e adolescentes em situação de vulnerabilidade.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Educação Infantil" style="width: 100%; height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <div style="display: flex; justify-content: between; align-items: start; margin-bottom: var(--space-4);">
+              <h3 style="margin: 0;">Educação para Todos</h3>
+              <span class="badge badge-success">Ativo</span>
+            </div>
+            <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">
+              Reforço escolar e atividades extracurriculares para crianças de 6 a 14 anos em comunidades carentes.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+              <div>
+                <div style="font-size: var(--text-sm); color: var(--neutral-500);">Público</div>
+                <div style="font-weight: var(--font-semibold);">500 crianças</div>
+              </div>
+              <div>
+                <div style="font-size: var(--text-sm); color: var(--neutral-500);">Local</div>
+                <div style="font-weight: var(--font-semibold);">Vila Novo Mundo Para Todos</div>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;">Apoiar este Projeto</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Oficina de Leitura" style="width: 100%; height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <div style="display: flex; justify-content: between; align-items: start; margin-bottom: var(--space-4);">
+              <h3 style="margin: 0;">Oficina de Leitura</h3>
+              <span class="badge badge-success">Ativo</span>
+            </div>
+            <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">
+              Incentivo à leitura através de bibliotecas comunitárias e encontros literários para jovens.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+              <div>
+                <div style="font-size: var(--text-sm); color: var(--neutral-500);">Público</div>
+                <div style="font-weight: var(--font-semibold);">300 jovens</div>
+              </div>
+              <div>
+                <div style="font-size: var(--text-sm); color: var(--neutral-500);">Local</div>
+                <div style="font-weight: var(--font-semibold);">3 comunidades</div>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;">Apoiar este Projeto</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="estatisticas">
-      <h2>Nossos Números</h2>
-      <div class="numeros">
-        <div class="numero-item">
-          <span class="destaque">500+</span>
-          <p>Pessoas Impactadas</p>
+    <section id="alimentacao" style="padding: var(--space-12) 0; background: var(--neutral-50); margin: 0 calc(-50vw + 50%); padding-left: calc(50vw - 50%); padding-right: calc(50vw - 50%);">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: var(--space-8);">
+          <span class="badge badge-secondary">Alimentação</span>
+          <h2>Segurança Alimentar</h2>
+          <p style="color: var(--neutral-600); max-width: 600px; margin: 0 auto;">Garantir que nenhuma família passe fome através de programas de distribuição de alimentos.</p>
         </div>
-        <div class="numero-item">
-          <span class="destaque">3</span>
-          <p>Projetos Ativos</p>
+
+        <div class="projects-grid">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cestas Básicas" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <div style="display: flex; justify-content: between; align-items: start; margin-bottom: var(--space-4);">
+                <h3 style="margin: 0;">Cestas Básicas Mensais</h3>
+                <span class="badge badge-success">Ativo</span>
+              </div>
+              <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">
+                Distribuição mensal de cestas básicas para famílias em situação de extrema vulnerabilidade.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+                <div>
+                  <div style="font-size: var(--text-sm); color: var(--neutral-500);">Famílias</div>
+                  <div style="font-weight: var(--font-semibold);">150/mês</div>
+                </div>
+                <div>
+                  <div style="font-size: var(--text-sm); color: var(--neutral-500);">Cobertura</div>
+                  <div style="font-weight: var(--font-semibold;">Todo município</div>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Doar Alimentos</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Horta Comunitária" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <div style="display: flex; justify-content: between; align-items: start; margin-bottom: var(--space-4);">
+                <h3 style="margin: 0;">Horta Comunitária</h3>
+                <span class="badge badge-warning">Em Expansão</span>
+              </div>
+              <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">
+                Cultivo coletivo de hortaliças e legumes para complementar a alimentação das famílias.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+                <div>
+                  <div style="font-size: var(--text-sm); color: var(--neutral-500);">Área</div>
+                  <div style="font-weight: var(--font-semibold);">2.000m²</div>
+                </div>
+                <div>
+                  <div style="font-size: var(--text-sm); color: var(--neutral-500);">Produção</div>
+                  <div style="font-weight: var(--font-semibold);">1 ton/mês</div>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Apoiar este Projeto</button>
+            </div>
+          </div>
         </div>
-        <div class="numero-item">
-          <span class="destaque">50</span>
-          <p>Voluntários</p>
+      </div>
+    </section>
+
+    <section id="saude" style="padding: var(--space-12) 0;">
+      <div style="text-align: center; margin-bottom: var(--space-8);">
+        <span class="badge" style="background: #8b5cf6; color: white;">Saúde</span>
+        <h2>Saúde e Bem-estar</h2>
+        <p style="color: var(--neutral-600); max-width: 600px; margin: 0 auto;">Cuidados com a saúde física e mental para promover qualidade de vida.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apoio Psicológico" style="width: 100%; height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <div style="display: flex; justify-content: between; align-items: start; margin-bottom: var(--space-4);">
+              <h3 style="margin: 0;">Apoio Psicológico</h3>
+              <span class="badge badge-success">Ativo</span>
+            </div>
+            <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">
+              Atendimento psicológico gratuito para crianças, adolescentes e adultos em situação de vulnerabilidade.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+              <div>
+                <div style="font-size: var(--text-sm); color: var(--neutral-500);">Pacientes</div>
+                <div style="font-weight: var(--font-semibold);">200/mês</div>
+              </div>
+              <div>
+                <div style="font-size: var(--text-sm); color: var(--neutral-500);">Profissionais</div>
+                <div style="font-weight: var(--font-semibold);">15 voluntários</div>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;">Apoiar este Projeto</button>
+          </div>
         </div>
-        <div class="numero-item">
-          <span class="destaque">5</span>
-          <p>Anos de Atuação</p>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Oficinas de Saúde" style="width: 100%; height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <div style="display: flex; justify-content: between; align-items: start; margin-bottom: var(--space-4);">
+              <h3 style="margin: 0;">Oficinas de Saúde</h3>
+              <span class="badge badge-success">Ativo</span>
+            </div>
+            <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">
+              Workshops e palestras sobre saúde preventiva, nutrição e cuidados básicos para a comunidade.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+              <div>
+                <div style="font-size: var(--text-sm); color: var(--neutral-500);">Participantes</div>
+                <div style="font-weight: var(--font-semibold);">500/ano</div>
+              </div>
+              <div>
+                <div style="font-size: var(--text-sm); color: var(--neutral-500);">Temas</div>
+                <div style="font-weight: var(--font-semibold;">12 oficinas</div>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;">Participar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="doar" style="padding: var(--space-12) 0; background: var(--neutral-100);">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: var(--space-8);">
+          <h2>Faça uma Doação</h2>
+          <p style="color: var(--neutral-600); max-width: 600px; margin: 0 auto;">
+            Sua contribuição ajuda a manter nossos projetos e transformar mais vidas.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="card card-center" style="padding: var(--space-6);">
+            <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary-500);">💰</div>
+            <h3>Doação Única</h3>
+            <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">Ajude com uma contribuição única</p>
+            <button class="btn btn-primary" onclick="doar(50)">Doar R$ 50</button>
+          </div>
+
+          <div class="card card-center" style="padding: var(--space-6);">
+            <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--secondary-500);">📅</div>
+            <h3>Doação Mensal</h3>
+            <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">Seja um doador recorrente</p>
+            <button class="btn btn-secondary" onclick="doar(25)">Doar R$ 25/mês</button>
+          </div>
+
+          <div class="card card-center" style="padding: var(--space-6);">
+            <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary-600);">🎯</div>
+            <h3>Doação Específica</h3>
+            <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">Escolha o projeto</p>
+            <button class="btn btn-outline" onclick="escolherProjeto()">Escolher Projeto</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: var(--space-12) 0;">
+      <div class="card" style="background: linear-gradient(135deg, var(--primary-500), var(--primary-600)); color: white; text-align: center; padding: var(--space-12);">
+        <h2 style="color: white; margin-bottom: var(--space-4);">Junte-se a Nossa Causa</h2>
+        <p style="color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto;">
+          Sua contribuição pode transformar vidas. Seja um voluntário ou faça uma doação para nossos projetos.
+        </p>
+        <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <a href="cadastro.html" class="btn" style="background: white; color: var(--primary-600); padding: var(--space-4) var(--space-8);">Seja Voluntário</a>
+          <a href="#doar" class="btn btn-outline" style="border-color: white; color: white; padding: var(--space-4) var(--space-8);">Fazer Doação</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  <footer style="background: var(--neutral-800); color: white; padding: var(--space-12) 0; margin-top: var(--space-12);">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color: white; margin-bottom: var(--space-4);">ONG Novo Mundo Para Todos</h3>
+          <p style="color: var(--neutral-300);">
+            Transformando vidas através da educação, alimentação e apoio psicológico.
+          </p>
+        </div>
+        
+        <div>
+          <h4 style="color: white; margin-bottom: var(--space-4);">Contato</h4>
+          <address style="color: var(--neutral-300); font-style: normal;">
+            <p>📧 projetos@novomundoparatodos.org</p>
+            <p>📞 (11) 99999-8888</p>
+            <p>📍 Rua da Solidariedade, 123 - São Paulo/SP</p>
+          </address>
+        </div>
+        
+        <div>
+          <h4 style="color: white; margin-bottom: var(--space-4);">Links Rápidos</h4>
+          <nav>
+            <a href="index.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Início</a>
+            <a href="projetos.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Projetos</a>
+            <a href="cadastro.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Cadastro</a>
+          </nav>
+        </div>
+      </div>
+      
+      <div style="border-top: 1px solid var(--neutral-700); padding-top: var(--space-6); margin-top: var(--space-8); text-align: center; color: var(--neutral-400);">
+        <p>&copy; 2024 ONG Novo Mundo Para Todos. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenu = document.querySelector('.close-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    function doar(valor) {
+      alert(`Obrigado pela doação de R$ ${valor}! Você será redirecionado para o pagamento.`);
+    }
+
+    function escolherProjeto() {
+      const projeto = prompt("Qual projeto você gostaria de apoiar?\n\n- Educação para Todos\n- Cestas Básicas\n- Apoio Psicológico\n- Horta Comunitária\n\nDigite o nome do projeto:");
+      if (projeto) {
+        alert(`Obrigado! Você escolheu apoiar: "${projeto}". Em breve entraremos em contato.`);
+      }
+    }
+
+    document.querySelector('a[href="#doar"]').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('doar').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  </script>
 </body>
 </html>

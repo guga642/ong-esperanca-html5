@@ -3,41 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG NOVO MUNDO PARA TODOS - Transformando Vidas</title>
+  <title>ONG Novo Mundo Para Todos - Transformando Vidas</title>
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-  <header>
-    <h1>ONG NOVO MUNDO PARA TODOS</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">ONG Novo Mundo Para Todos</a>
+      
+      <nav class="nav-menu">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Início</a></li>
+          <li class="dropdown">
+            <a href="projetos.html" class="nav-link">Projetos ▾</a>
+            <div class="dropdown-content">
+              <a href="projetos.html#educacao" class="dropdown-link">Educação</a>
+              <a href="projetos.html#alimentacao" class="dropdown-link">Alimentação</a>
+              <a href="projetos.html#saude" class="dropdown-link">Saúde</a>
+            </div>
+          </li>
+          <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+          <li><a href="#contato" class="btn btn-primary">Doar Agora</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Sobre Nós</h2>
-      <img src="imagens/banner1.jpg" alt="Voluntários ajudando crianças">
-       <p>💙 <strong>Onde há esperança, há vida!</strong> a ONG Esperança vem sendo a luz na vida de milhares de famílias. Não apenas oferecemos recursos, mas plantamos sementes de transformação que florescem por gerações.</p>
-  <p><em>"Sozinhos podemos fazer pouco; juntos podemos fazer muito." - Helen Keller</em></p>
-</section>
+  <div class="mobile-menu">
+    <button class="close-menu">×</button>
+    <ul class="mobile-nav">
+      <li><a href="index.html" class="mobile-nav-link">Início</a></li>
+      <li><a href="projetos.html" class="mobile-nav-link">Projetos</a></li>
+      <li><a href="cadastro.html" class="mobile-nav-link">Cadastro</a></li>
+      <li><a href="#contato" class="mobile-nav-link">Doar Agora</a></li>
+    </ul>
+  </div>
 
-    <section>
-      <h2>Contato</h2>
-      <address>
-        <p><strong>Email:</strong> contato@ongesperanca.org</p>
-        <p><strong>Telefone:</strong> (11) 99999-8888</p>
-        <p><strong>Endereço:</strong> Rua da Solidariedade, 123 – São Paulo/SP</p>
-      </address>
+  <main class="container">
+    <section class="hero-grid" style="padding: var(--space-16) 0;">
+      <div>
+        <h1>Transformando Vidas com Novo Mundo Para Todos</h1>
+        <p class="text-xl" style="color: var(--neutral-600); margin-bottom: var(--space-6);">
+          Há mais de 10 anos levando educação, alimentação e apoio psicológico para famílias em situação de vulnerabilidade.
+        </p>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <a href="cadastro.html" class="btn btn-primary">Seja Voluntário</a>
+          <a href="projetos.html" class="btn btn-outline">Conheça Projetos</a>
+        </div>
+      </div>
+      <div>
+        <img src="imagens/banner1.jpg" alt="Voluntários da ONG" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+      </div>
+    </section>
+
+    <section style="padding: var(--space-12) 0;">
+      <h2 style="text-align: center; margin-bottom: var(--space-8);">Nossos Diferenciais</h2>
+      <div class="features-grid">
+        <div class="card" style="padding: var(--space-6); text-align: center; border-radius: var(--radius-lg); background: white; box-shadow: var(--shadow-md);">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">🎯</div>
+          <h3 style="font-size: var(--text-xl);">Impacto Real</h3>
+          <p>Mais de 5.000 vidas transformadas através de nossos projetos sociais.</p>
+        </div>
+        
+        <div class="card" style="padding: var(--space-6); text-align: center; border-radius: var(--radius-lg); background: white; box-shadow: var(--shadow-md);">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">🤝</div>
+          <h3 style="font-size: var(--text-xl);">Transparência</h3>
+          <p>Prestamos contas de todos os recursos recebidos com relatórios detalhados.</p>
+        </div>
+        
+        <div class="card" style="padding: var(--space-6); text-align: center; border-radius: var(--radius-lg); background: white; box-shadow: var(--shadow-md);">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">🌱</div>
+          <h3 style="font-size: var(--text-xl);">Sustentabilidade</h3>
+          <p>Projetos de longo prazo que criam mudanças permanentes nas comunidades.</p>
+        </div>
+        
+        <div class="card" style="padding: var(--space-6); text-align: center; border-radius: var(--radius-lg); background: white; box-shadow: var(--shadow-md);">
+          <div style="font-size: 2rem; margin-bottom: var(--space-4);">💙</div>
+          <h3 style="font-size: var(--text-xl);">Compromisso</h3>
+          <p>Equipe dedicada e voluntários apaixonados por fazer a diferença.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: var(--space-12) 0;">
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center;">
+        <div>
+          <img src="imagens/voluntariado.jpg" alt="Trabalho voluntário" style="width: 100%; border-radius: var(--radius-lg);">
+        </div>
+        <div>
+          <h2>Sobre Nossa Missão</h2>
+          <p style="font-size: var(--text-lg); margin-bottom: var(--space-4);">
+            Acreditamos que toda pessoa merece oportunidades iguais. Por isso, trabalhamos incansavelmente para criar um mundo mais justo e solidário.
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6);">
+            <div style="text-align: center;">
+              <div style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--primary-600);">5000+</div>
+              <div style="color: var(--neutral-600);">Vidas Impactadas</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--primary-600);">150+</div>
+              <div style="color: var(--neutral-600);">Voluntários</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--primary-600);">12+</div>
+              <div style="color: var(--neutral-600);">Anos de Atuação</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--primary-600);">3</div>
+              <div style="color: var(--neutral-600);">Projetos Ativos</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  <footer style="background: var(--neutral-800); color: white; padding: var(--space-12) 0; margin-top: var(--space-12);">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color: white; margin-bottom: var(--space-4);">ONG Novo Mundo Para Todos</h3>
+          <p style="color: var(--neutral-300);">
+            Transformando vidas através da educação, alimentação e apoio psicológico.
+          </p>
+        </div>
+        
+        <div>
+          <h4 style="color: white; margin-bottom: var(--space-4);">Contato</h4>
+          <address style="color: var(--neutral-300); font-style: normal;">
+            <p>📧 contato@novomundoparatodos.org</p>
+            <p>📞 (11) 99999-8888</p>
+            <p>📍 Rua da Solidariedade, 123 - São Paulo/SP</p>
+          </address>
+        </div>
+        
+        <div>
+          <h4 style="color: white; margin-bottom: var(--space-4);">Links Rápidos</h4>
+          <nav>
+            <a href="index.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Início</a>
+            <a href="projetos.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Projetos</a>
+            <a href="cadastro.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Cadastro</a>
+          </nav>
+        </div>
+      </div>
+      
+      <div style="border-top: 1px solid var(--neutral-700); padding-top: var(--space-6); margin-top: var(--space-8); text-align: center; color: var(--neutral-400);">
+        <p>&copy; 2024 ONG Novo Mundo Para Todos. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Menu Hamburguer
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenu = document.querySelector('.close-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+
+    // Fechar menu ao clicar em um link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>

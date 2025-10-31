@@ -3,262 +3,381 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Voluntários - ONG Esperança</title>
+  <title>Cadastro de Voluntários - ONG Novo Mundo Para Todos</title>
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-  <header>
-    <h1>ONG Esperança</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">ONG Novo Mundo Para Todos</a>
+      
+      <nav class="nav-menu">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li class="dropdown">
+            <a href="projetos.html" class="nav-link">Projetos ▾</a>
+            <div class="dropdown-content">
+              <a href="projetos.html#educacao" class="dropdown-link">Educação</a>
+              <a href="projetos.html#alimentacao" class="dropdown-link">Alimentação</a>
+              <a href="projetos.html#saude" class="dropdown-link">Saúde</a>
+            </div>
+          </li>
+          <li><a href="cadastro.html" class="nav-link active">Cadastro</a></li>
+          <li><a href="#contato" class="btn btn-primary">Doar Agora</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="intro-cadastro">
-      <h2>Junte-se à Nossa Causa</h2>
-      <p>Preencha o formulário abaixo para se tornar um voluntário e fazer a diferença!</p>
+  <div class="mobile-menu">
+    <button class="close-menu">×</button>
+    <ul class="mobile-nav">
+      <li><a href="index.html" class="mobile-nav-link">Início</a></li>
+      <li><a href="projetos.html" class="mobile-nav-link">Projetos</a></li>
+      <li><a href="cadastro.html" class="mobile-nav-link">Cadastro</a></li>
+      <li><a href="#contato" class="mobile-nav-link">Doar Agora</a></li>
+    </ul>
+  </div>
+
+  <main class="container">
+    <section style="padding: var(--space-12) 0;">
+            <div style="text-align: center; padding: var(--space-12) 0;">
+        <h1>Junte-se à Nossa Causa</h1>
+        <p class="text-xl" style="color: var(--neutral-600); margin-bottom: var(--space-6); max-width: 600px; margin-left: auto; margin-right: auto;">
+          Preencha o formulário abaixo para se tornar um voluntário e fazer a diferença na vida de milhares de pessoas.
+        </p>
+        <div class="alert alert-info" style="max-width: 600px; margin: 0 auto;">
+          <strong>📋 Informação:</strong> Todos os campos marcados com * são obrigatórios.
+        </div>
+      </div>
     </section>
 
-    <section class="formulario-cadastro">
-      <form id="formVoluntario">
-        <div class="grupo-form">
-  <h3>📋 Dados Pessoais</h3>
-  
-  <div class="campo">
-    <label for="nome">Nome Completo *</label>
-    <input type="text" id="nome" name="nome" required minlength="5">
-  </div>
-
-  <div class="campo-duplo">
-    <div class="campo">
-      <label for="email">E-mail *</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="campo">
-      <label for="cpf">CPF *</label>
-      <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" maxlength="14">
-    </div>
-  </div>
-
-  <div class="campo-duplo">
-    <div class="campo">
-      <label for="telefone">Telefone *</label>
-      <input type="tel" id="telefone" name="telefone" required pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(11) 99999-8888" maxlength="15">
-    </div>
-    <div class="campo">
-      <label for="dataNascimento">Data de Nascimento *</label>
-      <input type="date" id="dataNascimento" name="dataNascimento" required>
-    </div>
-  </div>
-
-  <div class="campo">
-    <label for="endereco">Endereço Completo *</label>
-    <input type="text" id="endereco" name="endereco" required>
-  </div>
-
-  <div class="campo-duplo">
-    <div class="campo">
-      <label for="cep">CEP *</label>
-      <input type="text" id="cep" name="cep" required pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000" maxlength="9">
-    </div>
-    <div class="campo">
-      <label for="cidade">Cidade *</label>
-      <input type="text" id="cidade" name="cidade" required>
-    </div>
-  </div>
-
-  <div class="campo">
-    <label for="estado">Estado *</label>
-    <select id="estado" name="estado" required>
-      <option value="">Selecione seu estado</option>
-      <option value="AC">Acre</option>
-      <option value="AL">Alagoas</option>
-      <option value="AP">Amapá</option>
-      <option value="AM">Amazonas</option>
-      <option value="BA">Bahia</option>
-      <option value="CE">Ceará</option>
-      <option value="DF">Distrito Federal</option>
-      <option value="ES">Espírito Santo</option>
-      <option value="GO">Goiás</option>
-      <option value="MA">Maranhão</option>
-      <option value="MT">Mato Grosso</option>
-      <option value="MS">Mato Grosso do Sul</option>
-      <option value="MG">Minas Gerais</option>
-      <option value="PA">Pará</option>
-      <option value="PB">Paraíba</option>
-      <option value="PR">Paraná</option>
-      <option value="PE">Pernambuco</option>
-      <option value="PI">Piauí</option>
-      <option value="RJ">Rio de Janeiro</option>
-      <option value="RN">Rio Grande do Norte</option>
-      <option value="RS">Rio Grande do Sul</option>
-      <option value="RO">Rondônia</option>
-      <option value="RR">Roraima</option>
-      <option value="SC">Santa Catarina</option>
-      <option value="SP">São Paulo</option>
-      <option value="SE">Sergipe</option>
-      <option value="TO">Tocantins</option>
-    </select>
-  </div>
-</div>
-
-        <div class="grupo-form">
-          <h3>🎯 Áreas de Interesse</h3>
-          <p>Selecione as áreas onde gostaria de atuar:</p>
-          
-          <div class="checkbox-group">
-            <label class="checkbox-option">
-              <input type="checkbox" name="areas[]" value="educacao">
-              <span>📚 Educação Infantil</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="areas[]" value="alimentacao">
-              <span>🛒 Distribuição de Alimentos</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="areas[]" value="oficinas">
-              <span>⚡ Oficinas Profissionais</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="areas[]" value="administrativo">
-              <span>📊 Apoio Administrativo</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox" name="areas[]" value="eventos">
-              <span>🎉 Organização de Eventos</span>
-            </label>
-          </div>
+    <section style="padding: var(--space-8) 0;">
+      <div class="card">
+        <div class="card-header">
+          <h2 style="margin: 0;">Formulário de Cadastro</h2>
+          <p style="color: var(--neutral-600); margin: var(--space-2) 0 0 0;">Preencha seus dados pessoais e de interesse</p>
         </div>
-
-        <div class="grupo-form">
-          <h3>⏰ Disponibilidade</h3>
-          <div class="campo">
-            <label for="disponibilidade">Quantas horas por semana pode dedicar? *</label>
-            <select id="disponibilidade" name="disponibilidade" required>
-              <option value="">Selecione...</option>
-              <option value="2-4">2 a 4 horas</option>
-              <option value="4-8">4 a 8 horas</option>
-              <option value="8-12">8 a 12 horas</option>
-              <option value="12+">Mais de 12 horas</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label>Dias da semana disponível:</label>
-            <div class="checkbox-group horizontal">
-              <label class="checkbox-option">
-                <input type="checkbox" name="dias[]" value="segunda">
-                <span>Seg</span>
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="dias[]" value="terca">
-                <span>Ter</span>
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="dias[]" value="quarta">
-                <span>Qua</span>
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="dias[]" value="quinta">
-                <span>Qui</span>
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="dias[]" value="sexta">
-                <span>Sex</span>
-              </label>
-              <label class="checkbox-option">
-                <input type="checkbox" name="dias[]" value="sabado">
-                <span>Sáb</span>
-              </label>
+        
+        <div class="card-body">
+          <form id="formVoluntario" class="form-grid">
+            <div class="col-span-2">
+              <h3 style="color: var(--primary-700); margin-bottom: var(--space-4); border-bottom: 2px solid var(--primary-100); padding-bottom: var(--space-2);">
+                📋 Dados Pessoais
+              </h3>
             </div>
-          </div>
-        </div>
 
-        <div class="grupo-form">
-          <h3>💬 Mensagem</h3>
-          <div class="campo">
-            <label for="mensagem">Por que você quer ser um voluntário?</label>
-            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre sua motivação..."></textarea>
-          </div>
-        </div>
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome Completo *</label>
+              <input type="text" id="nome" name="nome" class="form-input" required placeholder="Digite seu nome completo">
+              <span class="form-help">Mínimo 5 caracteres</span>
+            </div>
 
-        <div class="acoes-form">
-          <button type="submit" class="btn-enviar">📨 Enviar Cadastro</button>
-          <button type="reset" class="btn-limpar">🔄 Limpar Formulário</button>
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail *</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="seu@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="cpf" class="form-label">CPF *</label>
+              <input type="text" id="cpf" name="cpf" class="form-input" required placeholder="000.000.000-00" maxlength="14">
+            </div>
+
+            <div class="form-group">
+              <label for="telefone" class="form-label">Telefone *</label>
+              <input type="tel" id="telefone" name="telefone" class="form-input" required placeholder="(11) 99999-8888" maxlength="15">
+            </div>
+
+            <div class="form-group">
+              <label for="dataNascimento" class="form-label">Data de Nascimento *</label>
+              <input type="date" id="dataNascimento" name="dataNascimento" class="form-input" required>
+            </div>
+
+            <div class="form-group col-span-2">
+              <label for="endereco" class="form-label">Endereço Completo *</label>
+              <input type="text" id="endereco" name="endereco" class="form-input" required placeholder="Rua, número, bairro">
+            </div>
+
+            <div class="form-group">
+              <label for="cep" class="form-label">CEP *</label>
+              <input type="text" id="cep" name="cep" class="form-input" required placeholder="00000-000" maxlength="9">
+            </div>
+
+            <div class="form-group">
+              <label for="cidade" class="form-label">Cidade *</label>
+              <input type="text" id="cidade" name="cidade" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="estado" class="form-label">Estado *</label>
+              <select id="estado" name="estado" class="form-input" required>
+                <option value="">Selecione seu estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+            </div>
+
+            <div class="col-span-2">
+              <h3 style="color: var(--primary-700); margin: var(--space-8) 0 var(--space-4) 0; border-bottom: 2px solid var(--primary-100); padding-bottom: var(--space-2);">
+                🎯 Áreas de Interesse
+              </h3>
+              <p style="color: var(--neutral-600); margin-bottom: var(--space-4);">Selecione as áreas onde gostaria de atuar:</p>
+            </div>
+
+            <div class="form-group col-span-2">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-4);">
+                <label style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border: 2px solid var(--neutral-200); border-radius: var(--radius); cursor: pointer; transition: var(--transition);">
+                  <input type="checkbox" name="areas[]" value="educacao" style="transform: scale(1.2);">
+                  <div>
+                    <div style="font-weight: var(--font-semibold);">📚 Educação Infantil</div>
+                    <div style="font-size: var(--text-sm); color: var(--neutral-500);">Apoio escolar e atividades</div>
+                  </div>
+                </label>
+
+                <label style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border: 2px solid var(--neutral-200); border-radius: var(--radius); cursor: pointer; transition: var(--transition);">
+                  <input type="checkbox" name="areas[]" value="alimentacao" style="transform: scale(1.2);">
+                  <div>
+                    <div style="font-weight: var(--font-semibold);">🛒 Distribuição de Alimentos</div>
+                    <div style="font-size: var(--text-sm); color: var(--neutral-500);">Cestas básicas e alimentos</div>
+                  </div>
+                </label>
+
+                <label style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border: 2px solid var(--neutral-200); border-radius: var(--radius); cursor: pointer; transition: var(--transition);">
+                  <input type="checkbox" name="areas[]" value="oficinas" style="transform: scale(1.2);">
+                  <div>
+                    <div style="font-weight: var(--font-semibold);">⚡ Oficinas Profissionais</div>
+                    <div style="font-size: var(--text-sm); color: var(--neutral-500);">Capacitação e cursos</div>
+                  </div>
+                </label>
+
+                <label style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border: 2px solid var(--neutral-200); border-radius: var(--radius); cursor: pointer; transition: var(--transition);">
+                  <input type="checkbox" name="areas[]" value="administrativo" style="transform: scale(1.2);">
+                  <div>
+                    <div style="font-weight: var(--font-semibold);">📊 Apoio Administrativo</div>
+                    <div style="font-size: var(--text-sm); color: var(--neutral-500);">Gestão e organização</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="col-span-2">
+              <h3 style="color: var(--primary-700); margin: var(--space-8) 0 var(--space-4) 0; border-bottom: 2px solid var(--primary-100); padding-bottom: var(--space-2);">
+                💬 Mensagem
+              </h3>
+            </div>
+
+            <div class="form-group col-span-2">
+              <label for="mensagem" class="form-label">Por que você quer ser um voluntário?</label>
+              <textarea id="mensagem" name="mensagem" class="form-input" rows="5" placeholder="Conte um pouco sobre sua motivação, experiências anteriores e como gostaria de contribuir..."></textarea>
+              <span class="form-help">Esta informação nos ajuda a entender melhor seu perfil</span>
+            </div>
+
+            <div class="form-group col-span-2" style="display: flex; gap: var(--space-4); justify-content: center; margin-top: var(--space-8);">
+              <button type="submit" class="btn btn-primary" style="padding: var(--space-4) var(--space-8); font-size: var(--text-lg);">
+                📨 Enviar Cadastro
+              </button>
+              <button type="reset" class="btn btn-outline" style="padding: var(--space-4) var(--space-8); font-size: var(--text-lg);">
+                🔄 Limpar Formulário
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </section>
 
-    <section class="info-contato">
-      <h3>📞 Dúvidas?</h3>
-      <p>Entre em contato conosco:</p>
-      <p><strong>Email:</strong> voluntarios@ongesperanca.org</p>
-      <p><strong>Telefone:</strong> (11) 99999-8888</p>
+    <section style="padding: var(--space-8) 0;">
+      <div class="features-grid">
+        <div class="card" style="text-align: center; padding: var(--space-6);">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">🤝</div>
+          <h3 style="color: var(--primary-700);">Suporte Contínuo</h3>
+          <p>Oferecemos treinamento e acompanhamento para todos os voluntários</p>
+        </div>
+
+        <div class="card" style="text-align: center; padding: var(--space-6);">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">🎯</div>
+          <h3 style="color: var(--primary-700);">Flexibilidade</h3>
+          <p>Você escolhe os horários e atividades que melhor se encaixam na sua rotina</p>
+        </div>
+
+        <div class="card" style="text-align: center; padding: var(--space-6);">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">📜</div>
+          <h3 style="color: var(--primary-700);">Certificação</h3>
+          <p>Emitimos certificado de participação para todos os voluntários</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  <footer style="background: var(--neutral-800); color: white; padding: var(--space-12) 0; margin-top: var(--space-12);">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color: white; margin-bottom: var(--space-4);">ONG Novo Mundo Para Todos</h3>
+          <p style="color: var(--neutral-300);">
+            Transformando vidas através da educação, alimentação e apoio psicológico.
+          </p>
+        </div>
+        
+        <div>
+          <h4 style="color: white; margin-bottom: var(--space-4);">Contato</h4>
+          <address style="color: var(--neutral-300); font-style: normal;">
+            <p>📧 voluntarios@novomundoparatodos.org</p>
+            <p>📞 (11) 99999-8888</p>
+            <p>📍 Rua da Solidariedade, 123 - São Paulo/SP</p>
+          </address>
+        </div>
+        
+        <div>
+          <h4 style="color: white; margin-bottom: var(--space-4);">Links Rápidos</h4>
+          <nav>
+            <a href="index.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Início</a>
+            <a href="projetos.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Projetos</a>
+            <a href="cadastro.html" style="color: var(--neutral-300); display: block; margin-bottom: var(--space-2); text-decoration: none;">Cadastro</a>
+          </nav>
+        </div>
+      </div>
+      
+      <div style="border-top: 1px solid var(--neutral-700); padding-top: var(--space-6); margin-top: var(--space-8); text-align: center; color: var(--neutral-400);">
+        <p>&copy; 2024 ONG Novo Mundo Para Todos. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
 
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <div style="text-align: center; padding: var(--space-4);">
+        <div style="font-size: 4rem; margin-bottom: var(--space-4);">🎉</div>
+        <h2 style="color: var(--success); margin-bottom: var(--space-4);">Cadastro Enviado!</h2>
+        <p style="color: var(--neutral-600); margin-bottom: var(--space-6);">
+          Obrigado pelo seu interesse em fazer a diferença! Entraremos em contato em até 48 horas.
+        </p>
+        <button class="btn btn-primary" onclick="closeModal()">Entendido</button>
+      </div>
+    </div>
+  </div>
+
   <script>
-// Máscaras para os campos
-document.getElementById('cpf').addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length <= 11) {
-        value = value.replace(/(\d{3})(\d)/, '$1.$2');
-        value = value.replace(/(\d{3})(\d)/, '$1.$2');
-        value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-    }
-    e.target.value = value;
-});
+    // Menu Hamburguer
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenu = document.querySelector('.close-menu');
 
-document.getElementById('telefone').addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length <= 11) {
-        value = value.replace(/(\d{2})(\d)/, '($1) $2');
-        value = value.replace(/(\d{5})(\d)/, '$1-$2');
-    }
-    e.target.value = value;
-});
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
 
-document.getElementById('cep').addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length <= 8) {
-        value = value.replace(/(\d{5})(\d)/, '$1-$2');
-    }
-    e.target.value = value;
-});
+    closeMenu.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
 
-// Validação do formulário
-document.getElementById('formVoluntario').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Verifica se todos os campos obrigatórios estão preenchidos
-    const requiredFields = this.querySelectorAll('[required]');
-    let valid = true;
-    
-    requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-            valid = false;
-            field.style.borderColor = '#e74c3c';
+    // Máscaras para os campos
+    document.getElementById('cpf').addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length <= 11) {
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+        }
+        e.target.value = value;
+    });
+
+    document.getElementById('telefone').addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length <= 11) {
+            value = value.replace(/(\d{2})(\d)/, '($1) $2');
+            value = value.replace(/(\d{5})(\d)/, '$1-$2');
+        }
+        e.target.value = value;
+    });
+
+    document.getElementById('cep').addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length <= 8) {
+            value = value.replace(/(\d{5})(\d)/, '$1-$2');
+        }
+        e.target.value = value;
+    });
+
+    // Modal functions
+    function showModal() {
+        document.getElementById('successModal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('successModal').classList.remove('active');
+    }
+
+    // Fechar modal ao clicar no X ou fora
+    document.querySelector('.close-modal').addEventListener('click', closeModal);
+    document.getElementById('successModal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+
+    // Validação do formulário
+    document.getElementById('formVoluntario').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const requiredFields = this.querySelectorAll('[required]');
+        let valid = true;
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                valid = false;
+                field.classList.add('error');
+            } else {
+                field.classList.remove('error');
+            }
+        });
+        
+        if (valid) {
+            showModal();
+            this.reset();
         } else {
-            field.style.borderColor = '#10B981';
+            alert('❌ Por favor, preencha todos os campos obrigatórios.');
         }
     });
-    
-    if (valid) {
-        alert('🎉 Cadastro enviado com sucesso! Entraremos em contato em breve.');
-        this.reset();
-    } else {
-        alert('❌ Por favor, preencha todos os campos obrigatórios.');
-    }
-});
-</script>
+
+    // Fechar menu mobile ao clicar em links
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
