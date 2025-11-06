@@ -1,18 +1,32 @@
-# 🎓 Projeto - Entregas I e II
+# 🎓 ONG Esperança - Projeto Acadêmico Completo
 
-## ✅ Entregas Concluídas
+## 📋 Entregas Concluídas
 
-### Entrega I - HTML
-- ✅ Estrutura semântica
-- ✅ Formulários (cadastro.html)
-- ✅ Navegação entre páginas
-- ✅ Base para o CSS
+### 🏗️ Entrega I - Estrutura HTML
+- HTML5 semântico
+- Páginas: Home, Cadastro, Projetos  
+- Formulários funcionais
+- Navegação acessível
 
-### Entrega II - CSS Avançado
-- ✅ Sistema de Design com variáveis CSS
-- ✅ Layout responsivo (Grid + Flexbox)
-- ✅ 5 breakpoints
-- ✅ Menu hambúrguer mobile
-- ✅ Componentes estilizados
-- ✅ Páginas: index.html, cadastro.html, projetos.html
+### 🎨 Entrega II - Sistema de Design
+- Design System CSS
+- Layout responsivo
+- 5 breakpoints
+- Componentes estilizados
 
+### ⚡ Entrega III - JavaScript
+- Single Page Application
+- Validação de formulários
+- Sistema de templates
+- Estrutura modular
+
+### ♿ Entrega IV - Acessibilidade
+- WCAG 2.1 AA
+- Navegação por teclado
+- Alto contraste
+- Controles de fonte
+- Otimização performance
+
+## 🚀 Como Executar
+```bash
+python3 -m http.server 8000
