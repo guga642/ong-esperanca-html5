@@ -1,0 +1,41 @@
+
+.form-group {
+    position: relative;
+    margin-bottom: var(--spacing-4);
+}
+
+.error-message {
+    display: none;
+    color: var(--error);
+    font-size: var(--text-sm);
+    margin-top: var(--spacing-2);
+}
+
+input.error {
+    border-color: var(--error);
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+}
+
+.form-error {
+    background: var(--error);
+    color: white;
+    padding: var(--spacing-3);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing-4);
+}
+
+.alert {
+    padding: var(--spacing-3);
+    border-radius: var(--radius);
+    margin: var(--spacing-4) 0;
+}
+
+.alert.error {
+    background: var(--error);
+    color: white;
+}
+
+.alert.success {
+    background: var(--success);
+    color: white;
+}
