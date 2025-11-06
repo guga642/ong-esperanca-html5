@@ -39,3 +39,123 @@ input.error {
     background: var(--success);
     color: white;
 }
+
+:root {
+    --text-color: #1a1a1a;
+    --bg-color: #ffffff;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background: var(--primary-600);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--primary-700);
+    outline: 3px solid var(--primary-200);
+}
+
+input, select, textarea {
+    border: 2px solid var(--gray-400);
+    background: var(--gray-50);
+    color: var(--text-color);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--primary-200);
+    border-color: var(--primary-500);
+}
+
+.hero h1 {
+    color: var(--gray-900);
+    text-shadow: none;
+}
+
+.nav a {
+    color: var(--gray-900);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.nav a:hover,
+.nav a:focus {
+    background: var(--primary-500);
+    color: white;
+    outline: none;
+}
+
+.nav a[aria-current="page"] {
+    background: var(--primary-600);
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    color: var(--gray-900);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    background: var(--primary-500);
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.footer {
+    background: var(--gray-100);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}

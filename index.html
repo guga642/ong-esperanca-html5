@@ -3,21 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Esperança</title>
+    <title>ONG Esperança - Transformando vidas através da solidariedade</title>
+    <meta name="description" content="ONG dedicada a projetos sociais e voluntariado. Cadastre-se como voluntário e faça a diferença.">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/accessibility.css">
 </head>
 <body>
-    <header class="header">
-        <nav>
-            <a href="#/" data-route="/">Home</a>
-            <a href="#/cadastro" data-route="/cadastro">Cadastro</a>
-            <a href="#/projetos" data-route="/projetos">Projetos</a>
-        </nav>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <nav class="nav" aria-label="Navegação principal">
+                    <ul class="nav-list">
+                        <li><a href="#/" data-route="/" role="link">Home</a></li>
+                        <li><a href="#/cadastro" data-route="/cadastro" role="link">Cadastro</a></li>
+                        <li><a href="#/projetos" data-route="/projetos" role="link">Projetos</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="accessibility-controls">
+                    <button id="high-contrast-btn" class="accessibility-btn" aria-label="Ativar alto contraste">
+                        <span aria-hidden="true">🌙</span>
+                    </button>
+                    <button id="font-size-increase" class="accessibility-btn" aria-label="Aumentar tamanho da fonte">
+                        <span aria-hidden="true">A+</span>
+                    </button>
+                    <button id="font-size-decrease" class="accessibility-btn" aria-label="Diminuir tamanho da fonte">
+                        <span aria-hidden="true">A-</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main id="app">
+    <main id="main-content" role="main">
+        <div id="app">
+            <section class="hero">
+                <div class="container">
+                    <h1>Bem-vindo à ONG Esperança</h1>
+                    <p>Transformando vidas através da solidariedade</p>
+                    <button data-route="/cadastro" class="btn-primary">Junte-se a nós</button>
+                </div>
+            </section>
+        </div>
     </main>
 
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 ONG Esperança. Todos os direitos reservados.</p>
+            <p aria-label="Informações de acessibilidade">Site desenvolvido com acessibilidade WCAG 2.1 AA</p>
+        </div>
+    </footer>
+
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/accessibility.js"></script>
 </body>
 </html>

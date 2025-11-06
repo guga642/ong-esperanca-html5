@@ -1,0 +1,22 @@
+{
+  "name": "ong-esperanca",
+  "version": "1.0.0",
+  "description": "ONG Esperança - Site acessível e otimizado",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "python3 -m http.server 8000",
+    "deploy": "npm run build"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "terser": "^5.44.1"
+  },
+  "keywords": [
+    "ong",
+    "acessibilidade",
+    "wcag"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT"
+}
